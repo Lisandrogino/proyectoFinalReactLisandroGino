@@ -1,5 +1,5 @@
 import React from 'react'
-import './ItemDetailConainer.css'
+import './ItemDetailContainer.css'
 
 const ItemDetailConainer = () => {
   return (

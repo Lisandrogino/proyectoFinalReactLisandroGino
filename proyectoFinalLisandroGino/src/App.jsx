@@ -3,6 +3,7 @@ import Home from './Components/Home/Home'
 
 import './App.css'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
+import ItemDetailConainer from './Components/ItemListContainer/ItemDetailConteiner/ItemDetailContainer'
 
 
 
@@ -14,6 +15,7 @@ function App() {
     <>
       <Home />
      <ItemListContainer/>
+     <ItemDetailConainer ItemId={2}/>
      
      
     </>
