@@ -1,0 +1,17 @@
+
+.toolbarContainer{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+}
+
+.navContainer{
+    display: flex;
+}
+
+.menuContainerContainer{
+    display: flex;
+    justify-content: space-between;
+    
+}
+

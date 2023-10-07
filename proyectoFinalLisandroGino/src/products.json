@@ -1,0 +1,84 @@
+[
+    {
+      "id": 1,
+      "title": "Cosmos",
+      "author": "Carl Sagan",
+      "description": "Una exploración del cosmos y nuestro lugar en él.",
+      "price": 20.99,
+      "imagen": "https://images.cdn3.buscalibre.com/fit-in/360x360/e0/f2/e0f299b5184dddfb41d39724f75349b8.jpg",
+      "category": "ciencia"
+    },
+    {
+      "id": 2,
+      "title": "Breve historia del tiempo",
+      "author": "Stephen Hawking",
+      "description": "Una explicación de los conceptos más complejos del universo.",
+      "price": 18.50,
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_619047-MLA69121826463_042023-O.webp",
+      "category": "ciencia"
+    },
+    {
+      "id": 3,
+      "title": "El gen egoísta",
+      "author": "Richard Dawkins",
+      "description": "Una reflexión sobre la evolución y la genética.",
+      "price": 22.75,
+      "imagen": "https://images.cdn2.buscalibre.com/fit-in/360x360/b9/7e/b97ec9fde86d1b2810e2aa66395f3b73.jpg",
+      "category": "ciencia"
+    },
+    {
+      "id": 4,
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "description": "Una epopeya de ciencia ficción en un mundo desértico.",
+      "price": 19.99,
+      "imagen": "https://images.cdn1.buscalibre.com/fit-in/360x360/86/9f/869fa8cf3c087c954b6a3b7293c31469.jpg",
+      "category": "ciencia ficción"
+    },
+    {
+      "id": 5,
+      "title": "Fundación",
+      "author": "Isaac Asimov",
+      "description": "La historia de un futuro lejano y la caída de un imperio.",
+      "price": 21.25,
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_866437-MLA54896378975_042023-O.webp",
+      "category": "ciencia ficción"
+    },
+    {
+      "id": 6,
+      "title": "Neuromante",
+      "author": "William Gibson",
+      "description": "Un clásico de la ciberpunk y la realidad virtual.",
+      "price": 16.99,
+      "imagen": "https://www.tebeosfera.com/T3content/img/T3_muestras/T3_series/2/j/m_neuromante_1984_gibson_52072j.jpg",
+      "category": "ciencia ficción"
+    },
+    {
+      "id": 7,
+      "title": "El Hobbit",
+      "author": "J.R.R. Tolkien",
+      "description": "La aventura de Bilbo Bolsón en la Tierra Media.",
+      "price": 15.50,
+      "imagen": "https://images.cdn1.buscalibre.com/fit-in/360x360/45/44/4544aa9e50feca33c58b1d4646f34b2f.jpg",
+      "category": "fantasía"
+    },
+    {
+      "id": 8,
+      "title": "Juego de Tronos",
+      "author": "George R.R. Martin",
+      "description": "Intriga y poder en un mundo de fantasía medieval.",
+      "price": 24.99,
+      "imagen": "https://images.cdn3.buscalibre.com/fit-in/520x520/1e/bd/1ebdf12d1e1f8f1de83c7fdfe3c2b1a5.jpg",
+      "category": "fantasía"
+    },
+    {
+      "id": 9,
+      "title": "Las Crónicas de Narnia",
+      "author": "C.S. Lewis",
+      "description": "Aventuras en un mundo mágico y misterioso.",
+      "price": 19.75,
+      "imagen": "https://images.cdn1.buscalibre.com/fit-in/360x360/3e/b7/3eb7fa1d683c5ef60c2e6cc56ce8d40d.jpg",
+      "category": "fantasía"
+    }
+  ]
+  
