@@ -1,9 +1,31 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
+import ItemDetail from '../ItemDetail/ItemDetail'
+import { solicitarProducto } from '../../../Hooks/assyncMoocls'
+
+
+
 import './ItemDetailContainer.css'
 
-const ItemDetailConainer = () => {
+
+const ItemDetailConainer = (ItemId) => {
+
+  const [item, setimtem] = useState(null)
+
+  useEffect(() => {
+   
+    solicitarProducto(ItemId)
+    .then((res)=>{
+      setimtem(res);
+    })
+  }, [ItemId])
+  
+
+
   return (
-    <div>ItemDetailConainer</div>
+    <div>
+    {item && <ItemDetail ItemId={ItemId}/> }
+    </div>
+     
   )
 }
 
