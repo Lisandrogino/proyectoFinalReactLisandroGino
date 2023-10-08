@@ -11,7 +11,7 @@ const ItemDetail = ({item}) => {
         </div>
 
          <div className="imagenContainer">
-                <h2 className="productoDetalleTitulo">{Item.title}</h2>
+                <h2 className="productoDetalleTitulo">{item.title}</h2>
         </div>
 
         <div className="productoDetalleContainer">
