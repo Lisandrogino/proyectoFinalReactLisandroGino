@@ -1,13 +1,10 @@
 import { useState, useEffect } from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { solicitarProducto } from '../../../Hooks/assyncMoocls'
-
-
-
 import './ItemDetailContainer.css'
 
 
-const ItemDetailConainer = (ItemId) => {
+const ItemDetailConainer = ({ItemId}) => {
 
   const [item, setimtem] = useState(null)
 
@@ -23,7 +20,7 @@ const ItemDetailConainer = (ItemId) => {
 
   return (
     <div>
-    {item && <ItemDetail ItemId={ItemId}/> }
+    {item && <ItemDetail item={item}/> }
     </div>
      
   )
