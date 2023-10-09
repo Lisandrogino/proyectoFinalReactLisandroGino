@@ -2,6 +2,7 @@ import React from 'react'
 import {AppBar, Toolbar, Button} from '@mui/material';
 import CardWidget from '../CardWidget/CardWidget';
 import './NavBar.css'
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -11,34 +12,57 @@ const NavBar = () => {
            
 
                     <div className='logoContainer'>
-                        <h1 className='logo'>Librería</h1>
+                        <Link to='/' className='logo'> <h1 className='logo'>Librería</h1></Link>
                     </div>
 
                 <nav className='navBarContainer'>
 
-                  
-                    
+                    <div className='navContainer'>
+
+                    <div className='menuContainer'>
+                        <Link to='/' className='inicioButton'>
+                        <Button className='buttonBar' color='secondary'>
+                            Inicio
+                        </Button>
+                        </Link>
+                    </div>
+ 
 
                     <div className='menuContainerContainer'>
-                    <div className='menuContainer'>
+
+                        <Link to='products/ciencia' className='cienciaButton'>
                         <Button className='buttonBar' color='secondary'>
                             Ciencia
                         </Button>
+                        </Link>
                     </div>
+    
 
                     <div className='menuContainer'>
+
+                    <Link to='products/cienciaFiccion' className='cienciaFiccionButton'>
+
                         <Button className='buttonBar' color='secondary'>
                             Ciencia Ficcion
                         </Button>
+
+                    </Link>
+
                     </div>
 
                     <div className='menuContainer'>
+
+                    <Link to='products/fantasia' className='fantasiaButton'>
                         <Button className='buttonBar' color='secondary'>
                             Fantasia
                         </Button>
+                    </Link>
+                        
                     </div>
 
                     </div>
+
+                   
                     
 
                 </nav>

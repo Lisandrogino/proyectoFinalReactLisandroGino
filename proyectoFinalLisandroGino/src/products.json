@@ -33,7 +33,7 @@
       "description": "Una epopeya de ciencia ficción en un mundo desértico.",
       "price": 19.99,
       "imagen": "https://images.cdn1.buscalibre.com/fit-in/360x360/86/9f/869fa8cf3c087c954b6a3b7293c31469.jpg",
-      "category": "ciencia ficción"
+      "category": "cienciaFiccion"
     },
     {
       "id": 5,
@@ -42,7 +42,7 @@
       "description": "La historia de un futuro lejano y la caída de un imperio.",
       "price": 21.25,
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_866437-MLA54896378975_042023-O.webp",
-      "category": "ciencia ficción"
+      "category": "cienciaFiccion"
     },
     {
       "id": 6,
@@ -51,7 +51,7 @@
       "description": "Un clásico de la ciberpunk y la realidad virtual.",
       "price": 16.99,
       "imagen": "https://www.tebeosfera.com/T3content/img/T3_muestras/T3_series/2/j/m_neuromante_1984_gibson_52072j.jpg",
-      "category": "ciencia ficción"
+      "category": "cienciaFiccion"
     },
     {
       "id": 7,
@@ -60,7 +60,7 @@
       "description": "La aventura de Bilbo Bolsón en la Tierra Media.",
       "price": 15.50,
       "imagen": "https://images.cdn1.buscalibre.com/fit-in/360x360/45/44/4544aa9e50feca33c58b1d4646f34b2f.jpg",
-      "category": "fantasía"
+      "category": "fantasia"
     },
     {
       "id": 8,
@@ -69,7 +69,7 @@
       "description": "Intriga y poder en un mundo de fantasía medieval.",
       "price": 24.99,
       "imagen": "https://images.cdn3.buscalibre.com/fit-in/520x520/1e/bd/1ebdf12d1e1f8f1de83c7fdfe3c2b1a5.jpg",
-      "category": "fantasía"
+      "category": "fantasia"
     },
     {
       "id": 9,
@@ -78,7 +78,7 @@
       "description": "Aventuras en un mundo mágico y misterioso.",
       "price": 19.75,
       "imagen": "https://images.cdn1.buscalibre.com/fit-in/360x360/3e/b7/3eb7fa1d683c5ef60c2e6cc56ce8d40d.jpg",
-      "category": "fantasía"
+      "category": "fantasia"
     }
   ]
   

@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import asyncMocks from '../../Hooks/assyncMoocls';
 import ItemList from './ItemList/ItemList';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
-  console.log(products);
+  
+
+  const category = useParams().category;
+  console.log(category)
 
   useEffect(() => {
     asyncMocks()
