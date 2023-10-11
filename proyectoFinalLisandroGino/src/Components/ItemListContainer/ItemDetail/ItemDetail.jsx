@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ItemCounter from '../ItemCounter'
 
 const ItemDetail = ({item}) => {
+
+
+  const [cantidad, setCantidad] = useState(1);
+
+  const restar = () => { cantidad > 1 && setCantidad(cantidad -1)}
+
+  const sumar = () => { cantidad < item.stock &&
+       setCantidad(cantidad +1)}
+
+  const agregarCarrito = () => {
+    console.log({...item, cantidad})
+  } 
+
+
   return (
+
+   
 
   
      <div className='detailProductContainer'>
@@ -19,6 +36,7 @@ const ItemDetail = ({item}) => {
                 <h3 className="productoDetalleAutor">{item.author}</h3>
                 <p className='productoDetalleDetalle'>{item.description}</p>
                 <h4 className="productoDetallePrecio"> $ {item.price}</h4>
+                <ItemCounter cantidad={cantidad} sumar={sumar} restar={restar} agregarCarrito={agregarCarrito}/>
                 
         </div>
     </div>    

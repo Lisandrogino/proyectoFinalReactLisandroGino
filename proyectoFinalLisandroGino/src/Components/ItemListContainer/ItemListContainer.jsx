@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
+  const [titulo, setTitulo] = useState('products')
   
 
   const category = useParams().category;
@@ -13,14 +14,22 @@ const ItemListContainer = () => {
   useEffect(() => {
     asyncMocks()
       .then((res) => {
-        setProducts(res);
+        if(category){
+          setProducts(res.filter((item)=> item.category === category))
+          setTitulo(category)
+        }else{
+          setProducts(res)
+          setTitulo('products')
+        }
       });
-  }, []);
+  }, [category]);
+
+  console.log(products)
 
   return (
     <div>
      
-        <ItemList productos={products}/>
+        <ItemList productos={products} titulo={titulo}/>
       
     </div>
   );
