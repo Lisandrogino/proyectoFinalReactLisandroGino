@@ -39,13 +39,22 @@ function App() {
   }
 
   const precioTotalCarrito = ()=>{
-    return carrito.reduce((acc, prod)=>{ acc + prod.price * prod.cantidad, 0})
+    return carrito.reduce((acc, prod)=> acc + prod.price * prod.cantidad, 0)
+  }
+
+  const eliminarCarrito = ()=>{
+    setCarrito([])
+  }
+
+  const eliminarProducto = (id)=>{
+    const nuevoCarrito = carrito.filter((prod)=> prod.id !== id);
+    setCarrito(nuevoCarrito)
   }
 
   return (
     <>
 
-    <CartContext.Provider value={{carrito, agregarCarrito, cantidadCartWidget, precioTotalCarrito}}>
+    <CartContext.Provider value={{carrito, agregarCarrito, cantidadCartWidget, precioTotalCarrito, eliminarCarrito, eliminarProducto}}>
     <BrowserRouter>
 
 
