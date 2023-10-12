@@ -3,7 +3,7 @@ import { CartContext } from '../../Context/CartContext'
 
 const CartPage = () => {
 
-    const {carrito} = useContext(CartContext)
+    const {carrito, precioTotalCarrito} = useContext(CartContext)
   return (
     <div className='carritoContainer'>
         <h1> Carrito </h1>
@@ -19,6 +19,8 @@ const CartPage = () => {
             </div>    
             )
         }
+
+        <h2>Precio Total Compra: ${precioTotalCarrito()}</h2>
     </div>
   )
 }

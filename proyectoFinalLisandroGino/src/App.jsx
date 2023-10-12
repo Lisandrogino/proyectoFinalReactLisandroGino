@@ -38,10 +38,14 @@ function App() {
     return carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
   }
 
+  const precioTotalCarrito = ()=>{
+    return carrito.reduce((acc, prod)=>{ acc + prod.price * prod.cantidad, 0})
+  }
+
   return (
     <>
 
-    <CartContext.Provider value={{carrito, agregarCarrito, cantidadCartWidget}}>
+    <CartContext.Provider value={{carrito, agregarCarrito, cantidadCartWidget, precioTotalCarrito}}>
     <BrowserRouter>
 
 
