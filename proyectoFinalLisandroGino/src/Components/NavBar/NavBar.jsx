@@ -1,6 +1,6 @@
 import React from 'react'
 import {AppBar, Toolbar, Button} from '@mui/material';
-import CardWidget from '../CardWidget/CardWidget';
+import CartWidget from '../CardWidget/CartWidget';
 import './NavBar.css'
 import { Link } from 'react-router-dom';
 
@@ -68,7 +68,7 @@ const NavBar = () => {
                 </nav>
 
                     <div className='cardWifget'>
-                        <CardWidget />
+                        <CartWidget />
                     </div>
 
             
