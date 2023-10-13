@@ -17,11 +17,12 @@ const CartPage = () => {
         {
             carrito.map((prod)=>
             <div className='carrtitoProductContainer' key={prod.id}>
+                
                 <h2>{prod.title}</h2>
                 <p>Cantidad:{prod.cantidad}</p>
                 <p>Precio: ${prod.price}</p>
                 <p>Precio Total: ${prod.price * prod.cantidad}</p>
-                <Button onClick={eliminarProducto}>Eliminar Producto</Button>
+                <Button onClick={()=>eliminarProducto(prod.id)}>Eliminar Producto</Button>
 
             </div>    
             )
