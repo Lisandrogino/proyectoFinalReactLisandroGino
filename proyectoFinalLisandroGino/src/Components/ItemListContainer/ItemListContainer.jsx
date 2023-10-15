@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import asyncMocks from '../../Hooks/assyncMoocls';
 import ItemList from './ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import {collection, getDocs } from 'firebase/firestore';
+import {collection, getDocs, query, where } from 'firebase/firestore';
 import {db} from '../../firebase/dataFirebase';
 
 const ItemListContainer = () => {
@@ -16,7 +16,11 @@ const ItemListContainer = () => {
   useEffect(() => {
 
       const productsRef = collection(db, "products");
-      getDocs(productsRef)
+
+      const q = category ? query(productsRef, where("category", "==", category)) : productsRef;
+
+
+      getDocs(q)
       .then((resp) => {
 
         setProducts(

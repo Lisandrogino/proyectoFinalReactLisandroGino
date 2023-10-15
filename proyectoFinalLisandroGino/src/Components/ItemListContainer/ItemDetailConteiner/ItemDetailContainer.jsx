@@ -17,9 +17,11 @@ const ItemDetailConainer = () => {
    
     const docRef = doc(db, "products", id);
     getDoc(docRef)
-    .them((resp)=>{
-      console.log(resp);
-    })
+      .then((resp)=>{
+       setimtem(
+          {...resp.data(), id: resp.id}
+        );
+      })
   }, [id])
   
 
