@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import asyncMocks from '../../Hooks/assyncMoocls';
 import ItemList from './ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+import {collection, getDocs } from 'firebase/firestore';
+import {db} from '../../firebase/dataFirebase';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -12,16 +14,19 @@ const ItemListContainer = () => {
   console.log(category)
 
   useEffect(() => {
-    asyncMocks()
-      .then((res) => {
-        if(category){
-          setProducts(res.filter((item)=> item.category === category))
-          setTitulo(category)
-        }else{
-          setProducts(res)
-          setTitulo('products')
-        }
-      });
+
+      const productsRef = collection(db, "products");
+      getDocs(productsRef)
+      .then((resp) => {
+
+        setProducts(
+          
+          resp.docs.map((doc)=>{
+            return {...doc.data(), id: doc.id}
+          })
+        );
+      })
+
   }, [category]);
 
   console.log(products)

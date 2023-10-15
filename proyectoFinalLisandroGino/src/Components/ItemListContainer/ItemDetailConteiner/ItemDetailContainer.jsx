@@ -3,6 +3,8 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import { solicitarProducto } from '../../../Hooks/assyncMoocls'
 import './ItemDetailContainer.css'
 import { useParams } from 'react-router-dom'
+import { doc, getDoc } from 'firebase/firestore';
+import {db} from '../../../firebase/dataFirebase'
 
 
 const ItemDetailConainer = () => {
@@ -13,9 +15,10 @@ const ItemDetailConainer = () => {
 
   useEffect(() => {
    
-    solicitarProducto(Number(id))
-    .then((res)=>{
-      setimtem(res);
+    const docRef = doc(db, "products", id);
+    getDoc(docRef)
+    .them((resp)=>{
+      console.log(resp);
     })
   }, [id])
   
