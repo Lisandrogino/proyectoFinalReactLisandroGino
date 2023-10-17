@@ -27,8 +27,10 @@ const ItemListContainer = () => {
           
           resp.docs.map((doc)=>{
             return {...doc.data(), id: doc.id}
+            
           })
         );
+        setTitulo(category)
       })
 
   }, [category]);
