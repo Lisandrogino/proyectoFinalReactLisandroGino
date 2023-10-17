@@ -6,7 +6,8 @@ import ItemDetailConainer from './Components/ItemListContainer/ItemDetailContein
 import {BrowserRouter, Route, Routes} from 'react-router-dom' 
 import CartPage from './Components/Cart/CartPage'
 import { CartProvider } from '../src/Context/CartContext'
-import CheckOut from './Components/CheckOut/CheckOut.Jsx'
+import CheckOut from './Components/CheckOut/CheckOut.jsx'
+
 
 
 
