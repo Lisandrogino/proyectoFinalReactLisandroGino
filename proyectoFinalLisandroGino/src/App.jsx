@@ -32,6 +32,8 @@ function App() {
 
         <Route exact path='/products/:category' element={<ItemListContainer />} />
 
+        <Route exact path='/carrito' element={<CartPage />} />
+
         <Route exact path='/checkout' element={<CheckOut />} />
 
           
