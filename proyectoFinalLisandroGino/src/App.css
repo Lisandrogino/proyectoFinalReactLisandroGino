@@ -1,4 +1,26 @@
 
+.bannerPictureContainer{
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://cdn.leonardo.ai/users/0c69facd-62e0-49d3-99fe-148352145ba8/generations/2a4ce4be-7aa4-4ab1-a36b-10fc9d43f286/DreamShaper_v7_futuristic_library_with_old_books_ebokks_and_co_2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    border-radius: 10px;
+   
+}
+
+.bannerTitle{
+    color: antiquewhite;
+    text-align: center;
+    padding: 200px;
+    font-size: 60px;
+}
+
+.bannerSubtitle{
+    color: antiquewhite;
+    text-align: center;
+    font-size: 40px;
+}
+
 .checkoutContainer{
     margin-top: 100px;
 }
@@ -48,6 +70,10 @@ h1{
     border-radius: 8px;
     color: black;
     
+}
+
+.bannerContainer{
+    margin-top: 100px;
 }
 
 
