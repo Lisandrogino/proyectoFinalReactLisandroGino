@@ -1,3 +1,54 @@
+
 .checkoutContainer{
     margin-top: 100px;
 }
+
+.detailProductContainer{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+h1{
+    text-align: center;
+}
+
+.productoDetalleTitulo{
+    text-align: center;
+}
+
+.productoDetalleContainer{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counterContainer{
+   
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+}
+
+.productoContainer{
+
+    margin: 30px;
+    
+    
+}
+
+.buttonVerLibro{
+    text-decoration: none;
+    background-color: lightblue;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    color: black;
+    
+}
+
+
+

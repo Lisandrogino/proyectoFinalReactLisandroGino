@@ -1,4 +1,22 @@
-.itemListTitle{
-    margin-top: 100px;
+.detailProductContainer{
+    margin-top: 200px;
+}
+
+.productListContainer{
+    margin-top: 150px;
+   
+    
+}
+
+.itemListTitleContainer{
     text-align: center;
 }
+
+.productListTag{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    
+   
+}
+

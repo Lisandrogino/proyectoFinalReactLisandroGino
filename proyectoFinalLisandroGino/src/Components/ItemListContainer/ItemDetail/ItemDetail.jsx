@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import ItemCounter from '../ItemCounter'
 import { CartContext } from '../../../Context/CartContext'
 
+
 const ItemDetail = ({item}) => {
 
   const {carrito, agregarCarrito} = useContext(CartContext)
@@ -25,20 +26,22 @@ const ItemDetail = ({item}) => {
      <div className='detailProductContainer'>
 
         <div>
-            <hi>Detalle Producto</hi>
+            <h1>Detalle Producto</h1>
         </div>
 
-         <div className="imagenContainer">
+         <div className="itemDetailContainer">
                 <h2 className="productoDetalleTitulo">{item.title}</h2>
         </div>
 
         <div className="productoDetalleContainer">
+        
                 <img src={item.imagen} alt="imagen portada" className="productoDetalleImagen"/>
                 <h3 className="productoDetalleAutor">{item.author}</h3>
                 <p className='productoDetalleDetalle'>{item.description}</p>
                 <h4 className="productoDetallePrecio"> $ {item.price}</h4>
                 <ItemCounter cantidad={cantidad} sumar={sumar} restar={restar} 
                 agregarCarrito={ ()=>{agregarCarrito(item, cantidad)}}/>
+          
                 
         </div>
     </div>    

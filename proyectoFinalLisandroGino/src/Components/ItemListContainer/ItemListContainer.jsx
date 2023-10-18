@@ -31,6 +31,7 @@ const ItemListContainer = () => {
           })
         );
         setTitulo(category)
+        
       })
 
   }, [category]);

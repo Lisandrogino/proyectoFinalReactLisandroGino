@@ -10,13 +10,13 @@ const ItemCounter = ( {cantidad, sumar, restar, agregarCarrito} ) => {
     
     <div className='counterContainer'>
 
-        <Button className='buttonRestar' onClick={restar}> - </Button>
+        <Button className='buttonRestar' variant='contained'  onClick={restar}> - </Button>
 
-        <p> cantidad: {cantidad}</p>
+        <p> cantidad: {cantidad} </p>
 
-        <Button className='buttonSumar' onClick={sumar}> + </Button>
+        <Button className='buttonSumar' variant='contained' onClick={sumar}> + </Button>
 
-        <Button className='agregarCarritoButton' onClick={agregarCarrito}>Agregar al Carrito</Button>
+        <Button className='agregarCarritoButton' sx={{ marginTop: '30px' }} variant='contained' onClick={agregarCarrito}>Agregar al Carrito</Button>
 
     </div>
 

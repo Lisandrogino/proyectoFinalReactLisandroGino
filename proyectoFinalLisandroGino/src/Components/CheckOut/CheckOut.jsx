@@ -8,7 +8,7 @@ import { db } from '../../firebase/dataFirebase'
 
 const CheckOut = () => {
 
-    const {pedidosID, setPedidosId} = useState("");
+    const [pedidosID, setPedidosId] = useState("");
 
     const {carrito, precioTotalCarrito, eliminarCarrito} = useContext(CartContext)
 
@@ -30,7 +30,14 @@ const CheckOut = () => {
         })
     }
 
-    
+    if(pedidosID){
+        return(
+            <div className='pedidosContainer'>
+                <h1>Gracias por tu compra</h1>
+                <p>Tu pedido es: {pedidosID}</p>
+            </div>
+        )
+    }
         
 
   return (

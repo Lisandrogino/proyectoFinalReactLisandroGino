@@ -3,6 +3,7 @@ import {AppBar, Toolbar, Button} from '@mui/material';
 import CartWidget from '../CardWidget/CartWidget';
 import './NavBar.css'
 import { Link } from 'react-router-dom';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 
 const NavBar = () => {
   return (
@@ -12,7 +13,10 @@ const NavBar = () => {
            
 
                     <div className='logoContainer'>
-                        <Link to='/' className='logo'> <h1 className='logo'>Librería</h1></Link>
+                        <Link to='/' className='logo'> 
+                        <AutoStoriesIcon fontSize='large'></AutoStoriesIcon>
+                        
+                         </Link>
                     </div>
 
                 <nav className='navBarContainer'>
