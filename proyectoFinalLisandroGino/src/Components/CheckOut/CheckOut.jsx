@@ -32,6 +32,7 @@ const CheckOut = () => {
             setPedidosId(doc.id)
             eliminarCarrito()
         })
+        console.log(pedidosRef)
     }
 
     
@@ -44,7 +45,7 @@ const CheckOut = () => {
             </div>
         )
     }
-        
+    console.log(pedidosID)    
 
   return (
     <div className='checkoutContainer'>
@@ -53,7 +54,7 @@ const CheckOut = () => {
 
             <form className='checkoutForm' onSubmit={handleSubmit(comprar)}>
 
-               
+                
 
                 <input className='checkoutName' type='text' placeholder='Ingresa tu nombre' {...register('nombre', {required: true, minLength: 2,})} />
 
@@ -93,6 +94,8 @@ const CheckOut = () => {
                 <Button className='checkOutEnviar' size='small' variant="contained"  type='submit'>Comprar</Button>
 
         </form>
+
+        
 
     </div>
   )
