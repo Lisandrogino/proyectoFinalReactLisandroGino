@@ -13,7 +13,7 @@ const CheckOut = () => {
 
     const {carrito, precioTotalCarrito, eliminarCarrito} = useContext(CartContext)
 
-    const {register, handleSubmit, getValues} = useForm();
+    const {register, handleSubmit, getValues, formState:{errors}} = useForm();
 
     
 
@@ -53,9 +53,42 @@ const CheckOut = () => {
 
             <form className='checkoutForm' onSubmit={handleSubmit(comprar)}>
 
-                <input className='checkoutName' type='text' placeholder='Ingresa tu nombre' {...register('nombre')} />
-                <input className='checkoutMail' type='email' placeholder='Ingresa tu mail' {...register('mail')} />
-                <input className='checkoutTel' type='phone' placeholder='Ingresa tu telefono' {...register('telefono')} />
+               
+
+                <input className='checkoutName' type='text' placeholder='Ingresa tu nombre' {...register('nombre', {required: true, minLength: 2,})} />
+
+                {errors?.nombre?.type === 'required' && (<p>Es necesario ingresar tu nombre</p>)}
+                {errors?.nombre?.type === 'minLength' && (<p>El nombre debe superar los 2 caracteres</p>)}
+
+                <input className='checkoutName' type='text' placeholder='Ingresa nuevamente tu nombre' {...register('nombre', {required: true, minLength: 2,})} />
+
+                {errors?.nombre?.type === 'required' && (<p>Es necesario ingresar tu nombre</p>)}
+                {errors?.nombre?.type === 'minLength' && (<p>El nombre debe superar los 2 caracteres</p>)}
+
+                
+                
+                <input className='checkoutMail' type='email' placeholder='Ingresa tu mail'   {...register('email1', { minLength: 3, required: true })} />
+
+                {errors?.email1?.type === 'minLength' && (<p>La dirección de mail no es valida</p>)}
+                {errors?.email1?.type === 'required' && (<p>Es necesario ingresar tu email</p>)}
+
+               
+
+                <input className="checkoutMail" type="email" placeholder='Ingresa nuevamente tu mail'  {...register('email2', { minLength: 3, required: true,
+                validate: { equalMails: (mail2) => mail2 === getValues().email1 },})} />
+
+                {errors?.email2?.type === 'minLength' && ( <p>La dirección de mail no es valida</p> )}
+
+                {errors?.email2?.type === 'required' && ( <p>Es necesario ingresar tu email</p>)}
+
+                {errors?.email2?.type === 'equalMails' && ( <p>Los mails deben ser iguales</p>)}
+
+               
+
+                <input className='checkoutTel' type='tel' placeholder='Ingresa tu telefono' {...register('phone', { minLength: 10, maxLength: 10, required: true, })} />
+
+                {errors?.phone?.type === 'minLength' && (<p>El teléfono debe tener 10 digitos</p> )}
+                {errors?.phone?.type === 'required' && ( <p>Es necesario ingresar tu teléfono</p> )}
 
                 <Button className='checkOutEnviar' size='small' variant="contained"  type='submit'>Comprar</Button>
 
