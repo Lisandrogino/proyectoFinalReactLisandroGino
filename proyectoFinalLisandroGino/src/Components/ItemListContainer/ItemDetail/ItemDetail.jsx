@@ -29,13 +29,16 @@ const ItemDetail = ({item}) => {
             <h1>Detalle Producto</h1>
         </div>
 
-         <div className="itemDetailContainer">
+                <div className="itemDetailContainer">
                 <h2 className="productoDetalleTitulo">{item.title}</h2>
-        </div>
+               </div>
 
         <div className="productoDetalleContainer">
-        
+
+               
+               
                 <img src={item.imagen} alt="imagen portada" className="productoDetalleImagen"/>
+                
                 <h3 className="productoDetalleAutor">{item.author}</h3>
                 <p className='productoDetalleDetalle'>{item.description}</p>
                 <h4 className="productoDetallePrecio"> $ {item.price}</h4>

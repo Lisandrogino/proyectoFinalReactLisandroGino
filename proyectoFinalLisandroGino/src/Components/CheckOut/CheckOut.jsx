@@ -3,6 +3,7 @@ import { CartContext } from '../../Context/CartContext'
 import { useForm } from 'react-hook-form'
 import { collection, addDoc } from 'firebase/firestore'
 import { db } from '../../firebase/dataFirebase'
+import { Button } from '@mui/material'
 
 
 
@@ -12,7 +13,9 @@ const CheckOut = () => {
 
     const {carrito, precioTotalCarrito, eliminarCarrito} = useContext(CartContext)
 
-    const {register, handleSubmit} = useForm();
+    const {register, handleSubmit, getValues} = useForm();
+
+    
 
     const comprar = (data)=>{
         const pedido = {
@@ -27,14 +30,17 @@ const CheckOut = () => {
         addDoc(pedidosRef, pedido)
         .then((doc)=>{
             setPedidosId(doc.id)
+            eliminarCarrito()
         })
     }
+
+    
 
     if(pedidosID){
         return(
             <div className='pedidosContainer'>
                 <h1>Gracias por tu compra</h1>
-                <p>Tu pedido es: {pedidosID}</p>
+                <p className='pedidoId'>Tu pedido es: {pedidosID}</p>
             </div>
         )
     }
@@ -51,7 +57,7 @@ const CheckOut = () => {
                 <input className='checkoutMail' type='email' placeholder='Ingresa tu mail' {...register('mail')} />
                 <input className='checkoutTel' type='phone' placeholder='Ingresa tu telefono' {...register('telefono')} />
 
-                <button className='checkOutEnviar' type='submit'>Comprar</button>
+                <Button className='checkOutEnviar' size='small' variant="contained"  type='submit'>Comprar</Button>
 
         </form>
 

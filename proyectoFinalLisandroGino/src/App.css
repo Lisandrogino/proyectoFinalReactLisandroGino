@@ -5,6 +5,10 @@
     background-position: center;
     height: 100vh;
     border-radius: 10px;
+    background-color: #dad7cd;
+    box-shadow: 10px 13px 23px -7px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 13px 23px -7px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 13px 23px -7px rgba(0,0,0,0.75);
    
 }
 
@@ -21,9 +25,7 @@
     font-size: 40px;
 }
 
-.checkoutContainer{
-    margin-top: 100px;
-}
+
 
 .detailProductContainer{
     margin-top: 150px;
@@ -45,7 +47,21 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    transition: all 400ms ease;
 }
+
+.productoDetalleContainer:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+
+
 
 .counterContainer{
    
@@ -75,6 +91,88 @@ h1{
 .bannerContainer{
     margin-top: 100px;
 }
+
+.carritoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+    transition: all 400ms ease;
+    
+}
+
+.carritoContainer img{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.carrtitoProductContainer{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carritoTotalCompra{
+    text-align: center;
+}
+
+.checkoutButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vaciarCarritoButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.checkoutContainer{
+    margin-top: 100px;
+   
+}
+
+.checkoutForm{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+}
+
+.checkoutName {
+    margin: 10px;
+    padding: 20px;
+
+}
+
+.checkoutMail{
+    margin: 10px;
+    padding: 20px;
+}
+
+.checkoutTel{
+    margin: 10px;
+    padding: 20px;
+
+}
+
+.pedidoId{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+
+
 
 
 

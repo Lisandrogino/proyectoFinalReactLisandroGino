@@ -19,10 +19,12 @@ const CartPage = () => {
             <div className='carrtitoProductContainer' key={prod.id}>
                 
                 <h2>{prod.title}</h2>
+                <img src={prod.imagen} alt="imagen portada" className="productoDetalleImagen"/>
+                
                 <p>Cantidad:{prod.cantidad}</p>
                 <p>Precio: ${prod.price}</p>
                 <p>Precio Total: ${prod.price * prod.cantidad}</p>
-                <Button onClick={()=>eliminarProducto(prod.id)}>Eliminar Producto</Button>
+                <Button variant="contained" onClick={()=>eliminarProducto(prod.id)}>Eliminar Producto</Button>
                 
 
             </div>    
@@ -33,10 +35,11 @@ const CartPage = () => {
 
             carrito.length > 0? 
             <>
-            <h2>Precio Total Compra: ${precioTotalCarrito()}</h2>
-            <Button className='vaciarCarritoButton' onClick={vaciarCarrito}>Vaciar Carrito</Button>
+            <h2 className='carritoTotalCompra'>Precio Total Compra: ${precioTotalCarrito()}</h2>
+            <Button className='vaciarCarritoButton' variant="contained"  onClick={vaciarCarrito}>Vaciar Carrito</Button>
+
             <Link to='/checkout' className='checkoutButton'>
-                        <Button className='checkoutbuttonbutton' color='secondary'>
+                        <Button className='checkoutbuttonbutton' sx={{ marginTop: '30px' }} variant="contained" color='secondary'>
                             Finalizar Compra
                         </Button>
                 </Link>
