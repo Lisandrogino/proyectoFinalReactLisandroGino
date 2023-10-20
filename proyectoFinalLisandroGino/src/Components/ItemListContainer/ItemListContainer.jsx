@@ -31,7 +31,7 @@ const ItemListContainer = () => {
             
           })
         );
-        setTitulo(category)
+        
         
       })
 
@@ -42,7 +42,7 @@ const ItemListContainer = () => {
   return (
     <div>
      
-        <ItemList productos={products} titulo={titulo} category={category} />
+        <ItemList productos={products} titulo={titulo} titulo={titulo}  />
       
     </div>
   );
