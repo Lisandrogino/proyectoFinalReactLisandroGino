@@ -27,15 +27,14 @@ export const solicitarProducto = (id) => {
   })
 }
 
-function formatearCategoria(category) {
-
+export function formatearCategoria(palabra) {
   
-  const palabrasCapitalizadas = palabras.map((palabra) =>
-    palabra.charAt(0).toUpperCase() + palabra.slice(1)
-  );
+  const palabraCapitalizada = palabra === 'cienciaFiccion' ? palabra.split(/(?=[A-Z])/) 
+  .map(word => word.charAt(0).toUpperCase() + word.slice(1)) 
+  .join(" ")
+  :palabra.charAt(0).toUpperCase() + palabra.slice(1)
 
-  return categoriaFormateada;
+
+  return palabraCapitalizada;
 }
-
-
 

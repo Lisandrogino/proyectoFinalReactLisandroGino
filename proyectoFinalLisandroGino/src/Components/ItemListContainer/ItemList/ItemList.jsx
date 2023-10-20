@@ -5,14 +5,16 @@ import { formatearCategoria } from '../../../Hooks/assyncMoocls'
 
 
 
-const ItemList = ({productos, titulo}) => {
+
+const ItemList = ({productos, titulo, category}) => {
+
 
   //prueba
   console.log(productos)
 
   
-  const tituloFormateado = formatearCategoria(titulo);
-
+ 
+  const tituloFormateado = category ? formatearCategoria(category) :  formatearCategoria(titulo)
 
 
 
