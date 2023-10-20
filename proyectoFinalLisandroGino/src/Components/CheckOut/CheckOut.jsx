@@ -85,10 +85,14 @@ const CheckOut = () => {
 
                
 
-                <input className='checkoutTel' type='tel' placeholder='Ingresa tu telefono' {...register('phone', { minLength: 10, maxLength: 10, required: true, })} />
+                <input className='checkoutTel' type='tel' placeholder='Ingresa tu telefono' {...register('phone', { minLength: 10, required: true, })} />
 
-                {errors?.phone?.type === 'minLength' && (<p>El teléfono debe tener 10 digitos</p> )}
+                {errors?.phone?.type === 'minLength' && ( <p>El teléfono debe tener 10 digitos</p> )}
+
                 {errors?.phone?.type === 'required' && ( <p>Es necesario ingresar tu teléfono</p> )}
+
+                
+
 
                 <Button className='checkOutEnviar' size='small' variant="contained"  type='submit'>Comprar</Button>
 
