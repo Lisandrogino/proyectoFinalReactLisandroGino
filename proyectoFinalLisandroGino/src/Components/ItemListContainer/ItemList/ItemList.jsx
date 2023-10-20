@@ -1,7 +1,8 @@
 import React from 'react'
 import ProductItem from '../ProductItem/ProductItem'
 import './ItemList.css'
-import { Grid } from '@mui/material'
+import { formatearCategoria } from '../../../Hooks/assyncMoocls'
+
 
 
 const ItemList = ({productos, titulo}) => {
@@ -10,7 +11,7 @@ const ItemList = ({productos, titulo}) => {
   console.log(productos)
 
   
-
+  const tituloFormateado = formatearCategoria(titulo);
 
 
 
@@ -23,7 +24,7 @@ const ItemList = ({productos, titulo}) => {
 
 
       <div className='itemListTitleContainer'>
-      <h1 className='itemListTitle'>{titulo}</h1>
+      <h1 className='itemListTitle'>{tituloFormateado}</h1>
       </div>
 
       

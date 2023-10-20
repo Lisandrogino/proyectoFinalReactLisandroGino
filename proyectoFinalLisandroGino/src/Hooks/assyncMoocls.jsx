@@ -28,15 +28,13 @@ export const solicitarProducto = (id) => {
 }
 
 function formatearCategoria(category) {
-  // Dividir la cadena en palabras separadas por espacios
+
   const palabras = category.split(' ');
 
-  // Convertir la primera letra de cada palabra en mayúscula
   const palabrasCapitalizadas = palabras.map((palabra) =>
     palabra.charAt(0).toUpperCase() + palabra.slice(1)
   );
 
-  // Unir las palabras nuevamente en una sola cadena
   const categoriaFormateada = palabrasCapitalizadas.join(' ');
 
   return categoriaFormateada;
