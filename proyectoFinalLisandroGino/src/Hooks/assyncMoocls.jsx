@@ -29,13 +29,10 @@ export const solicitarProducto = (id) => {
 
 function formatearCategoria(category) {
 
-  const palabras = category.split(' ');
-
+  
   const palabrasCapitalizadas = palabras.map((palabra) =>
     palabra.charAt(0).toUpperCase() + palabra.slice(1)
   );
-
-  const categoriaFormateada = palabrasCapitalizadas.join(' ');
 
   return categoriaFormateada;
 }
